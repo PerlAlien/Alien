@@ -1,14 +1,15 @@
 --- #YAML:1.0
 name: Alien
-version: 0.9
+version: 0.91
 license: perl
 distribution_type: module
 requires: {}
 recommends: {}
-build_requires: {}
+build_requires:
+  Test::Pod: 0
 conflicts: {}
 provides:
   Alien:
     file: lib/Alien.pm
-    version: 0.9
+    version: 0.91
 generated_by: Module::Build version 0.20

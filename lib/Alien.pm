@@ -3,7 +3,7 @@ package Alien;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = 0.9;
+$VERSION = 0.91;
 
 =head1 NAME
 
@@ -20,19 +20,37 @@ of Alien:: packages, so there is no code here, just motivation for Alien.
 
 =head2 Why
 
-So me and James ended up doing a build system for Fotango, lots of people have done a build system, it is a pretty boring task. The boring task is really all the mindlessly stupid things you need to do to build C libraries that perl modules require, these C modules usually have unusual installation systems or require vastly different options. So CPAN modules install easy, 3rd party stuff is nasty.
+James and I ended up doing a build system for Fotango, lots of people
+have done a build system, it is a pretty boring task. The boring task
+is really all the mindlessly stupid things you need to do to build C
+libraries that Perl modules require, these C modules usually have
+unusual installation systems or require vastly different options. So
+CPAN modules install easy, 3rd party stuff is nasty.
 
-So, suddenly an idea struck me, Alien packages! Imagine a CPAN module that has as it's only task to make sure a certain library is installed! That means that you can write all the voodoo in your Build.PL file and then just make sure the module requires the correct Alien module! Then anything that install perl modules will deal with it automatically!
+So, suddenly an idea struck me, Alien packages! Imagine a CPAN module
+that has as its only task to make sure a certain library is
+installed! That means that you can write all the voodoo in your
+Build.PL file and then just make sure the module requires the correct
+Alien module! Then anything that install Perl modules will deal with
+it automatically!
 
 =head2 How
 
-So, what should an Alien module do? It should make sure that the target is installed and it should provide the caller with enough information to use it.
+So, what should an Alien module do? It should make sure that the
+target is installed and it should provide the caller with enough
+information to use it.
 
-The idea is that you use it to make sure it is there, and you call class methods to find out what to use. These class methods will be individually specified by the stand alone Alien modules.
+The idea is that you use it to make sure it is there, and you call
+class methods to find out what to use. These class methods will be
+individually specified by the stand alone Alien modules.
 
 =head2 No Framework!
 
-The reason this is so loosely worded is because we have no idea what common functionality will be needed, so we will let evolution work for us and see what individual Alien packages need and then eventually factor it out into this packages. I would like to avoid a topdown design approach.
+The reason this is so loosely worded is because we have no idea what
+common functionality will be needed, so we will let evolution work for
+us and see what individual Alien packages need and then eventually
+factor it out into this packages. I would like to avoid a topdown
+design approach.
 
 =head2 Responsibilities of a Alien module.
 
