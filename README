@@ -1,16 +1,5 @@
-
 NAME
     Alien - External libraries wrapped up for your viewing pleasure!
-
-INSTALLATION
-
-    perl Build.PL
-    ./Build
-    ./Build test
-    ./Build install
-
-
-    If you are on a windows box you should use 'nmake' rather than 'make'.
 
 SYNOPSIS
         perldoc Alien;
@@ -21,18 +10,18 @@ DESCRIPTION
     Alien.
 
   Why
-    So me and James ended up doing a build system for Fotango, lots of
-    people have done a build system, it is a pretty boring task. The boring
-    task is really all the mindlessly stupid things you need to do to build
-    C libraries that perl modules require, these C modules usually have
+    James and I ended up doing a build system for Fotango, lots of people
+    have done a build system, it is a pretty boring task. The boring task is
+    really all the mindlessly stupid things you need to do to build C
+    libraries that Perl modules require, these C modules usually have
     unusual installation systems or require vastly different options. So
     CPAN modules install easy, 3rd party stuff is nasty.
 
     So, suddenly an idea struck me, Alien packages! Imagine a CPAN module
-    that has as it's only task to make sure a certain library is installed!
+    that has as its only task to make sure a certain library is installed!
     That means that you can write all the voodoo in your Build.PL file and
     then just make sure the module requires the correct Alien module! Then
-    anything that install perl modules will deal with it automatically!
+    anything that install Perl modules will deal with it automatically!
 
   How
     So, what should an Alien module do? It should make sure that the target
