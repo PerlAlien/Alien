@@ -91,7 +91,15 @@ LICENSE file included with this module.
 
 =head1 SEE ALSO
 
-perl(1).
+=over 4
+
+=item L<Alien::Base>
+
+=item L<#native on irc.perl.org|http://chat.mibbit.com/#native@irc.perl.org>
+
+=item L<Perl5 Alien mailing list|https://groups.google.com/forum/#!forum/perl5-alien>
+
+=back
 
 =cut
 

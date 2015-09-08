@@ -7,4 +7,10 @@ Module::Build->new
       build_requires  => {
 	Test::Pod => 0,
       },
+      meta_merge => {
+        resources => {
+          x_MailingList => 'https://groups.google.com/forum/#!forum/perl5-alien',
+          x_IRC => "irc://irc.perl.org/#native",
+        },
+      },
     )->create_build_script;

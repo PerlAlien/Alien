@@ -1,0 +1,44 @@
+{
+   "abstract" : "External libraries wrapped up for your viewing pleasure!",
+   "author" : [
+      "abergman@fotango.com"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4214",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Alien",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Pod" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.42"
+         }
+      }
+   },
+   "provides" : {
+      "Alien" : {
+         "file" : "lib/Alien.pm",
+         "version" : "0.91"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "x_IRC" : "irc://irc.perl.org/#native",
+      "x_MailingList" : "https://groups.google.com/forum/#!forum/perl5-alien"
+   },
+   "version" : "0.91",
+   "x_serialization_backend" : "JSON::PP version 2.27300"
+}

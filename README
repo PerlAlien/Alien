@@ -73,5 +73,8 @@ COPYRIGHT
     with this module.
 
 SEE ALSO
-    perl(1).
+    Alien::Base
+    #native on irc.perl.org <http://chat.mibbit.com/#native@irc.perl.org>
+    Perl5 Alien mailing list
+    <https://groups.google.com/forum/#!forum/perl5-alien>
 
