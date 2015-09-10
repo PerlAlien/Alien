@@ -68,6 +68,15 @@ but do not use them to build XS modules.  The reason for this is that
 if an end user upgrades their version of C<Alien::Foo> it may break
 the already installed version of C<Foo::XS> that uses it.
 
+=item On Windows (ActiveState, Strawberry Perl)
+
+Many open source libraries use C<autoconf> and other Unix focused tools
+that may not be easily available on the native (non-Cygwin) windows Perl.
+L<Alien::MSYS> provides just enough of these tools for C<autoconf> and
+may be sufficient for some other build tools.  Also, L<Alien::Base>
+has hooks to detect C<autoconf> and inject L<Alien::MSYS> as a requirement
+on Windows when it is needed.
+
 =back
 
 =head1 ORIGINAL MANIFESTO

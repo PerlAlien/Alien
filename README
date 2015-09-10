@@ -53,6 +53,14 @@ CAVEATS
         that if an end user upgrades their version of "Alien::Foo" it may
         break the already installed version of "Foo::XS" that uses it.
 
+    On Windows (ActiveState, Strawberry Perl)
+        Many open source libraries use "autoconf" and other Unix focused
+        tools that may not be easily available on the native (non-Cygwin)
+        windows Perl. Alien::MSYS provides just enough of these tools for
+        "autoconf" and may be sufficient for some other build tools. Also,
+        Alien::Base has hooks to detect "autoconf" and inject Alien::MSYS as
+        a requirement on Windows when it is needed.
+
 ORIGINAL MANIFESTO
     What follows is the original Alien manifesto written by Artur Bergman.
     It is included here, because much of it is still largely true today, but
