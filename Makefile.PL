@@ -11,6 +11,8 @@ WriteMakefile(
       bugtracker => {
         web  => 'https://github.com/Perl5-Alien/Alien/issues',
       },
+      x_MailingList => 'https://groups.google.com/forum/#!forum/perl5-alien',
+      x_IRC => "irc://irc.perl.org/#native",
       homepage => 'https://metacpan.org/pod/Alien',
       repository => {
         type => 'git',

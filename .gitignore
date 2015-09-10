@@ -4,3 +4,4 @@
 *.bak
 /blib/
 /Alien-*
+/pm_to_blib
