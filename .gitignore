@@ -1,6 +1,6 @@
-/Build
+/Makefile
 /MYMETA.json
 /MYMETA.yml
-/_build
 *.bak
 /blib/
+/Alien-*
