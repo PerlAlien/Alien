@@ -2,7 +2,6 @@ Build.PL
 Changes
 lib/Alien.pm
 LICENSE
-Makefile.PL
 MANIFEST
 META.json
 META.yml
@@ -10,4 +9,3 @@ NINJA
 README
 t/001_load.t
 t/002_pod.t
-Todo
