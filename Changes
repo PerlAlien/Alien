@@ -1,12 +1,19 @@
 Revision history for Perl module Alien
 
+0.92 Wed Sep 10 2015
+  - Update documentation to reflect the past decade of actual
+    Alien development.
+  - Include links to #native IRC channel and Alien::Base mailing list
+  - Remove dependency on Module::Build and Test::Pod.  This dist
+    now has no non-core dependencies.
+
 0.91 Mon Oct 13 16:39:22 BST 2003
-     	- Minor documentation nit from Rocco Caputo <troc@netrus.net>
-        - META.yml file was not synchronized with the Build.PL
-	- Added NINJA file.
-        - Spelling fixes from Leon Brocard <lbrocard@fotango.com>
+  - Minor documentation nit from Rocco Caputo <troc@netrus.net>
+  - META.yml file was not synchronized with the Build.PL
+  - Added NINJA file.
+  - Spelling fixes from Leon Brocard <lbrocard@fotango.com>
 
 0.9 Mon Oct 13 10:59:48 2003
-	- original version; created by ExtUtils::ModuleMaker 0.32
+  - original version; created by ExtUtils::ModuleMaker 0.32
 
 
