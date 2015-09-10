@@ -26,7 +26,7 @@ characteristics of an Alien distribution include:
 
 =item Probe for or install library during the build process
 
-Usually this means that L<Module::Build> or L<ExtUtils::MakeMaker> will
+Usually this means that C<Build.PL> or C<Makefile.PL> will
 probe for an existing system library that meets the criteria of the
 Alien module.  If it cannot be found the library is downloaded from
 the Internet and installed into a share directory (See L<File::ShareDir>).
