@@ -87,8 +87,7 @@ but it was out of necessity quite aspirational at the time it was written.
 
 =head2 Why
 
-James and I ended up doing a build
-system for Fotango, lots of people
+James and I ended up doing a build system for Fotango, lots of people
 have done a build system, it is a pretty boring task. The boring task
 is really all the mindlessly stupid things you need to do to build C
 libraries that Perl modules require, these C modules usually have
