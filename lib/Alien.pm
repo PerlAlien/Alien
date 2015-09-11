@@ -52,13 +52,13 @@ These are suggestions only, and this module does not provide a framework,
 because the needs of an non-native dependency on CPAN are potentially
 quite diverse.  That being said, if your library uses a standard build
 system, like C<autoconf>, C<make> or C<CMake> you should consider using
-L<Alien::Base> which makes it easy to write L<Alien> modules many common
+L<Alien::Base> which makes it easy to write Alien modules many common
 types of package build systems.
 
 =head1 CAVEATS
 
 This section contains some recommendations from my own experience in
-writing L<Alien> modules and from working on the L<Alien::Base> team.
+writing Alien modules and from working on the L<Alien::Base> team.
 
 =over 4
 
@@ -84,14 +84,14 @@ The original Alien documentation recommends the use of L<Module::Build>
 (MB), which at the time was recommended over L<ExtUtils::MakeMaker> 
 (EUMM). Many Alien distributions have been written using MB (including 
 L<Alien::Base>).  I believe this is because it is an easier build system 
-to adapt to the L<Alien> concept.  It should be noted that MB is no 
+to adapt to the Alien concept.  It should be noted that MB is no 
 longer universally recommended over EUMM.
 
 =back
 
 =head1 ORIGINAL MANIFESTO
 
-What follows is the original L<Alien> manifesto written by Artur Bergman.
+What follows is the original Alien manifesto written by Artur Bergman.
 It is included here, because much of it is still largely true today,
 but it was out of necessity quite aspirational at the time it was written.
 
@@ -173,22 +173,22 @@ LICENSE file included with this module.
 
 =item L<Alien::Base>
 
-An (optional) base class and framework for creating L<Alien> distributions.
+An (optional) base class and framework for creating Alien distributions.
 
 =item L<Alien::Base::FAQ>
 
 Frequently Asked Questions for L<Alien::Base>.  Mostly specific to L<Alien::Base>,
-but also addresses some challenges for L<Alien> in general.
+but also addresses some challenges for Alien in general.
 
 =item L<#native on irc.perl.org|http://chat.mibbit.com/#native@irc.perl.org>
 
 This channel on IRC is dedicated to those interested in using native interfaces
-in Perl.  It is specifically geared to L<Alien>, L<Alien::Base> and FFI.
+in Perl.  It is specifically geared to Alien, L<Alien::Base> and FFI.
 
 =item L<Perl5 Alien mailing list|https://groups.google.com/forum/#!forum/perl5-alien>
 
 This mailing list is mainly for L<Alien::Base>, and announcements for new
-versions will be posted there, but general L<Alien> inquires are also welcome.
+versions will be posted there, but general Alien inquires are also welcome.
 
 =back
 
