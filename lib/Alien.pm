@@ -77,6 +77,15 @@ may be sufficient for some other build tools.  Also, L<Alien::Base>
 has hooks to detect C<autoconf> and inject L<Alien::MSYS> as a requirement
 on Windows when it is needed.
 
+=item MB vs EUMM
+
+The original Alien documentation recommends the use of L<Module::Build> 
+(MB), which at the time was recommended over L<ExtUtils::MakeMaker> 
+(EUMM). Many Alien distributions have been written using MB (including 
+L<Alien::Base>).  I believe this is because it is an easier build system 
+to adapt to the L<Alien> concept.  It should be noted that MB is no 
+longer universally recommended over EUMM.
+
 =back
 
 =head1 ORIGINAL MANIFESTO
@@ -130,6 +139,8 @@ Bundle the source with the module, or download it.
 Allow module authors to access information it gathers.
 
 Document itself well.
+
+Preferably use L<Module::Build>. [ see caveats above ]
 
 Be sane.
 

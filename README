@@ -60,6 +60,14 @@ CAVEATS
         Alien::Base has hooks to detect "autoconf" and inject Alien::MSYS as
         a requirement on Windows when it is needed.
 
+    MB vs EUMM
+        The original Alien documentation recommends the use of Module::Build
+        (MB), which at the time was recommended over ExtUtils::MakeMaker
+        (EUMM). Many Alien distributions have been written using MB
+        (including Alien::Base). I believe this is because it is an easier
+        build system to adapt to the Alien concept. It should be noted that
+        MB is no longer universally recommended over EUMM.
+
 ORIGINAL MANIFESTO
     What follows is the original Alien manifesto written by Artur Bergman.
     It is included here, because much of it is still largely true today, but
@@ -106,6 +114,8 @@ ORIGINAL MANIFESTO
     Allow module authors to access information it gathers.
 
     Document itself well.
+
+    Preferably use Module::Build. [ see caveats above ]
 
     Be sane.
 
