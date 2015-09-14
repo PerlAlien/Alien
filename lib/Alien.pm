@@ -17,10 +17,10 @@ Alien - External libraries wrapped up for your viewing pleasure!
 Alien is a package that exists just to hold together an idea, the idea
 of Alien:: packages, so there is no code here, just motivation for Alien.
 
-The intent of Alien is to provide a mechanism for specifying and installing
-non-native dependencies on CPAN.  Frequently, this is a C library used
-by XS, but it could be anything non-Perl usable from Perl.  Typical
-characteristics of an Alien distribution include:
+The intent of Alien is to provide a mechanism for specifying, installing 
+and using non-native dependencies on CPAN.  Frequently, this is a C 
+library used by XS, but it could be anything non-Perl usable from Perl.  
+Typical characteristics of an Alien distribution include:
 
 =over 4
 
@@ -48,12 +48,12 @@ library flags required for using the library.
 
 =back
 
-These are suggestions only, and this module does not provide a framework,
-because the needs of an non-native dependency on CPAN are potentially
-quite diverse.  That being said, if your library uses a standard build
-system, like C<autoconf>, C<make> or C<CMake> you should consider using
-L<Alien::Base> which makes it easy to write Alien modules many common
-types of package build systems.
+These are suggestions only, and this module does not provide a 
+framework, because the needs of a non-native dependency on CPAN are 
+potentially quite diverse.  That being said, if your library uses a 
+standard build system, like C<autoconf>, C<make> or C<CMake> you should 
+consider using L<Alien::Base> which makes it easy to write Alien modules 
+that work with many common types of package build systems.
 
 =head1 CAVEATS
 
@@ -64,19 +64,20 @@ writing Alien modules and from working on the L<Alien::Base> team.
 
 =item When building from source code, build static libraries whenever possible
 
-Or at least isolate the dynamic libraries so they can be used by FFI,
-but do not use them to build XS modules.  The reason for this is that
-if an end user upgrades their version of C<Alien::Foo> it may break
-the already installed version of C<Foo::XS> that uses it.
+Or at least isolate the dynamic libraries so they can be used by FFI, 
+but do not use them to build XS modules.  The reason for this is that if 
+an end user upgrades their version of C<Alien::Foo> it may break the 
+already installed version of C<Foo::XS> that used it when it was 
+installed.
 
 =item On Windows (ActiveState, Strawberry Perl)
 
-Many open source libraries use C<autoconf> and other Unix focused tools
-that may not be easily available on the native (non-Cygwin) windows Perl.
-L<Alien::MSYS> provides just enough of these tools for C<autoconf> and
-may be sufficient for some other build tools.  Also, L<Alien::Base>
-has hooks to detect C<autoconf> and inject L<Alien::MSYS> as a requirement
-on Windows when it is needed.
+Many open source libraries use C<autoconf> and other Unix focused tools 
+that may not be easily available to the native (non-Cygwin) windows 
+Perl. L<Alien::MSYS> provides just enough of these tools for C<autoconf> 
+and may be sufficient for some other build tools.  Also, L<Alien::Base> 
+has hooks to detect C<autoconf> and inject L<Alien::MSYS> as a 
+requirement on Windows when it is needed.
 
 =item MB vs EUMM
 
