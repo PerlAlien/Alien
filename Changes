@@ -1,6 +1,8 @@
 Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
+
+0.94      2017-03-10 11:08:52 -0500
   - Add references to alienfile + Alien::Build
   - Migrate to Dist::Zilla
 
