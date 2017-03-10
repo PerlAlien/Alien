@@ -1,5 +1,7 @@
 Revision history for Perl module Alien
 
+  - Add references to alienfile + Alien::Build
+
 0.93 Mon Sep 14, 2015
   - Completely restored the original text for "ORIGINAL MANIFESTO".
     I removed the reference to Module::Build (MB), as it is not well
