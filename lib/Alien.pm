@@ -1,16 +1,14 @@
 package Alien;
 
 use strict;
-use vars qw($VERSION);
-$VERSION = 0.93;
+use warnings;
 
-=head1 NAME
-
-Alien - External libraries wrapped up for your viewing pleasure!
+# ABSTRACT: External libraries wrapped up for your viewing pleasure!
+# VERSION
 
 =head1 SYNOPSIS
 
- perldoc Alien;
+ % perldoc Alien
 
 =head1 DESCRIPTION
 
@@ -156,24 +154,6 @@ Be sane.
 
 No support needed.
 
-=head1 AUTHOR
-
-=over 4
-
-=item Arthur Bergman <abergman@fotango.com>
-
-=item Graham Ollis <plicease@cpan.org>
-
-=back
-
-=head1 COPYRIGHT
-
-This program is free software; you can redistribute
-it and/or modify it under the same terms as Perl itself.
-
-The full text of the license can be found in the
-LICENSE file included with this module.
-
 =head1 SEE ALSO
 
 =over 4
@@ -213,5 +193,4 @@ versions will be posted there, but general Alien inquires are also welcome.
 =cut
 
 1;
-__END__
 

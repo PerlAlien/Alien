@@ -1,6 +1,8 @@
-Revision history for Perl module Alien
+Revision history for Perl module {{$dist->name}}
 
+{{$NEXT}}
   - Add references to alienfile + Alien::Build
+  - Migrate to Dist::Zilla
 
 0.93 Mon Sep 14, 2015
   - Completely restored the original text for "ORIGINAL MANIFESTO".

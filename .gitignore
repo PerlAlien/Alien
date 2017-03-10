@@ -1,7 +1,3 @@
-/Makefile
-/MYMETA.json
-/MYMETA.yml
-*.bak
-/blib/
 /Alien-*
-/pm_to_blib
+/.build
+*.swp
