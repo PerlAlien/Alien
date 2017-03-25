@@ -172,10 +172,10 @@ for details on how to create your own L<Alien::Build> based Alien.
 
 An (optional) base class and framework for creating Alien distributions.
 
-=item L<Alien::Build::FAQ>
+=item L<Alien::Base::FAQ>
 
-Frequently Asked Questions for L<Alien::Build>.  Mostly specific to 
-L<Alien::Build>, but also addresses some challenges for Alien in 
+Frequently Asked Questions for L<Alien::Based>.  Mostly specific to 
+L<Alien::Base>, but also addresses some challenges for Alien in 
 general.
 
 =item L<#native on irc.perl.org|http://chat.mibbit.com/#native@irc.perl.org>
