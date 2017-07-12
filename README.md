@@ -72,7 +72,7 @@ writing Alien modules and from working on the [Alien::Base](https://metacpan.org
 
     The original Alien documentation recommends the use of [Module::Build](https://metacpan.org/pod/Module::Build) 
     (MB), which at the time was recommended over [ExtUtils::MakeMaker](https://metacpan.org/pod/ExtUtils::MakeMaker) 
-    (EUMM).  May Alien distributions have been written using MB.  Including 
+    (EUMM).  Many Alien distributions have been written using MB.  Including 
     the original installer that came with [Alien::Base](https://metacpan.org/pod/Alien::Base), 
     [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild).  I believe this is because it is an easier 
     build system to adapt to the Alien concept.  MB is no longer universally 
@@ -158,10 +158,10 @@ No support needed.
 
     An (optional) base class and framework for creating Alien distributions.
 
-- [Alien::Build::FAQ](https://metacpan.org/pod/Alien::Build::FAQ)
+- [Alien::Base::FAQ](https://metacpan.org/pod/Alien::Base::FAQ)
 
-    Frequently Asked Questions for [Alien::Build](https://metacpan.org/pod/Alien::Build).  Mostly specific to 
-    [Alien::Build](https://metacpan.org/pod/Alien::Build), but also addresses some challenges for Alien in 
+    Frequently Asked Questions for [Alien::Based](https://metacpan.org/pod/Alien::Based).  Mostly specific to 
+    [Alien::Base](https://metacpan.org/pod/Alien::Base), but also addresses some challenges for Alien in 
     general.
 
 - [#native on irc.perl.org](http://chat.mibbit.com/#native@irc.perl.org)

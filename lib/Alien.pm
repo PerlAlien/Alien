@@ -82,7 +82,7 @@ L<Alien::MSYS> as a requirement on Windows when it is needed.
 
 The original Alien documentation recommends the use of L<Module::Build> 
 (MB), which at the time was recommended over L<ExtUtils::MakeMaker> 
-(EUMM).  May Alien distributions have been written using MB.  Including 
+(EUMM).  Many Alien distributions have been written using MB.  Including 
 the original installer that came with L<Alien::Base>, 
 L<Alien::Base::ModuleBuild>.  I believe this is because it is an easier 
 build system to adapt to the Alien concept.  MB is no longer universally 
