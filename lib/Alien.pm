@@ -174,7 +174,7 @@ An (optional) base class and framework for creating Alien distributions.
 
 =item L<Alien::Base::FAQ>
 
-Frequently Asked Questions for L<Alien::Based>.  Mostly specific to 
+Frequently Asked Questions for L<Alien::Base>.  Mostly specific to 
 L<Alien::Base>, but also addresses some challenges for Alien in 
 general.
 
