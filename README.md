@@ -160,7 +160,7 @@ No support needed.
 
 - [Alien::Base::FAQ](https://metacpan.org/pod/Alien::Base::FAQ)
 
-    Frequently Asked Questions for [Alien::Based](https://metacpan.org/pod/Alien::Based).  Mostly specific to 
+    Frequently Asked Questions for [Alien::Base](https://metacpan.org/pod/Alien::Base).  Mostly specific to 
     [Alien::Base](https://metacpan.org/pod/Alien::Base), but also addresses some challenges for Alien in 
     general.
 
