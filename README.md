@@ -4,7 +4,9 @@ External libraries wrapped up for your viewing pleasure!
 
 # SYNOPSIS
 
-    % perldoc Alien
+```
+% perldoc Alien
+```
 
 # DESCRIPTION
 
