@@ -10,20 +10,19 @@ External libraries wrapped up for your viewing pleasure!
 
 # DESCRIPTION
 
-Alien is a package that exists just to hold together an idea, the idea
-of Alien:: packages, so there is no code here, just motivation for Alien.
+The intent of the Alien namespace is to provide a mechanism for specifying,
+installing and using non-native dependencies on CPAN.  Frequently this is
+a C library used by XS (see [perlxs](https://metacpan.org/pod/perlxs)) or FFI (see [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus)), but
+it could be anything non-Perl usable from Perl.
 
-The intent of Alien is to provide a mechanism for specifying, installing 
-and using non-native dependencies on CPAN.  Frequently, this is a C 
-library used by XS, but it could be anything non-Perl usable from Perl.  
 Typical characteristics of an Alien distribution include:
 
 - Probe for or install library during the build process
 
-    Usually this means that [Module::Build](https://metacpan.org/pod/Module::Build) or [ExtUtils::MakeMaker](https://metacpan.org/pod/ExtUtils::MakeMaker) will 
-    be extended to probe for an existing system library that meets the 
-    criteria of the Alien module.  If it cannot be found the library is 
-    downloaded from the Internet and installed into a share directory (See 
+    Usually this means that [Module::Build](https://metacpan.org/pod/Module::Build) or [ExtUtils::MakeMaker](https://metacpan.org/pod/ExtUtils::MakeMaker) will
+    be extended to probe for an existing system library that meets the
+    criteria of the Alien module.  If it cannot be found the library is
+    downloaded from the Internet and installed into a share directory (See
     [File::ShareDir](https://metacpan.org/pod/File::ShareDir)).
 
     Usually, though not necessarily, this is a C library.  It could be
@@ -40,48 +39,49 @@ Typical characteristics of an Alien distribution include:
     and `Alien::Foo->libs` class methods to return the compiler and
     library flags required for using the library.
 
-These are suggestions only, and this module does not provide a 
-framework, because the needs of a non-native dependency on CPAN are 
-potentially quite diverse.  That being said, if your library uses a 
-standard build system, like `autoconf`, `make` or `CMake` you should 
-consider using [Alien::Build](https://metacpan.org/pod/Alien::Build) and [Alien::Base](https://metacpan.org/pod/Alien::Base) which makes it easy to 
-write Alien modules that work with many common types of package build 
-systems.
+These are guidelines, and this module does not provide an implementation
+or a framework, because of the diverse nature of non-Perl dependencies
+on CPAN.  The more common cases are handled by the [Alien::Base](https://metacpan.org/pod/Alien::Base) +
+[Alien::Build](https://metacpan.org/pod/Alien::Build) system, which is recommended if you want to avoid
+reinventing the wheel.  See the ["SEE ALSO"](#see-also) section below for helpful
+resources.
 
 # CAVEATS
 
 This section contains some recommendations from my own experience in
-writing Alien modules and from working on the [Alien::Base](https://metacpan.org/pod/Alien::Base) team.
+writing Alien modules and from working on the [Alien::Base](https://metacpan.org/pod/Alien::Base) +
+[Alien::Build](https://metacpan.org/pod/Alien::Build) team.  The [Alien::Build](https://metacpan.org/pod/Alien::Build) FAQ ([Alien::Build::Manual::FAQ](https://metacpan.org/pod/Alien::Build::Manual::FAQ))
+also addresses a number of implementation specific gotchas.
 
 - When building from source code, build static libraries whenever possible
 
-    Or at least isolate the dynamic libraries so they can be used by FFI, 
-    but do not use them to build XS modules.  The reason for this is that if 
-    an end user upgrades their version of `Alien::Foo` it may break the 
-    already installed version of `Foo::XS` that used it when it was 
+    Or at least isolate the dynamic libraries so they can be used by FFI,
+    but do not use them to build XS modules.  The reason for this is that if
+    an end user upgrades their version of `Alien::Foo` it may break the
+    already installed version of `Foo::XS` that used it when it was
     installed.
 
 - On Windows (ActiveState, Strawberry Perl)
 
-    Many open source libraries use `autoconf` and other Unix focused tools 
-    that may not be easily available to the native (non-Cygwin) windows 
-    Perl. [Alien::MSYS](https://metacpan.org/pod/Alien::MSYS) provides just enough of these tools for `autoconf` 
-    and may be sufficient for some other build tools.  Also, [Alien::Build](https://metacpan.org/pod/Alien::Build) 
-    and [Alien::Base](https://metacpan.org/pod/Alien::Base) have hooks to detect `autoconf` and inject 
+    Many open source libraries use `autoconf` and other Unix focused tools
+    that may not be easily available to the native (non-Cygwin) windows
+    Perl. [Alien::MSYS](https://metacpan.org/pod/Alien::MSYS) provides just enough of these tools for `autoconf`
+    and may be sufficient for some other build tools.  Also, [Alien::Build](https://metacpan.org/pod/Alien::Build)
+    and [Alien::Base](https://metacpan.org/pod/Alien::Base) have hooks to detect `autoconf` and inject
     [Alien::MSYS](https://metacpan.org/pod/Alien::MSYS) as a requirement on Windows when it is needed.
 
 - MB vs EUMM
 
-    The original Alien documentation recommends the use of [Module::Build](https://metacpan.org/pod/Module::Build) 
-    (MB), which at the time was recommended over [ExtUtils::MakeMaker](https://metacpan.org/pod/ExtUtils::MakeMaker) 
-    (EUMM).  Many Alien distributions have been written using MB.  Including 
-    the original installer that came with [Alien::Base](https://metacpan.org/pod/Alien::Base), 
-    [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild).  I believe this is because it is an easier 
-    build system to adapt to the Alien concept.  MB is no longer universally 
-    recommended over EUMM, and has been removed from Perl's core, so if you 
-    can, this author recommends using EUMM instead.  [Alien::Build](https://metacpan.org/pod/Alien::Build) and 
-    [Alien::Build::MM](https://metacpan.org/pod/Alien::Build::MM) provide tools for creating EUMM based Aliens.  
-    Another example worth looking at is [Alien::pkgconf](https://metacpan.org/pod/Alien::pkgconf), which uses EUMM, 
+    The original Alien documentation recommends the use of [Module::Build](https://metacpan.org/pod/Module::Build)
+    (MB), which at the time was recommended over [ExtUtils::MakeMaker](https://metacpan.org/pod/ExtUtils::MakeMaker)
+    (EUMM).  Many Alien distributions have been written using MB.  Including
+    the original installer that came with [Alien::Base](https://metacpan.org/pod/Alien::Base),
+    [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild).  I believe this is because it is an easier
+    build system to adapt to the Alien concept.  MB is no longer universally
+    recommended over EUMM, and has been removed from Perl's core, so if you
+    can, this author recommends using EUMM instead.  [Alien::Build](https://metacpan.org/pod/Alien::Build) and
+    [Alien::Build::MM](https://metacpan.org/pod/Alien::Build::MM) provide tools for creating EUMM based Aliens.
+    Another example worth looking at is [Alien::pkgconf](https://metacpan.org/pod/Alien::pkgconf), which uses EUMM,
     but isn't based on [Alien::Base](https://metacpan.org/pod/Alien::Base) or [Alien::Build](https://metacpan.org/pod/Alien::Build).
 
 # ORIGINAL MANIFESTO
@@ -140,10 +140,6 @@ Preferably use [Module::Build](https://metacpan.org/pod/Module::Build). \[ see c
 
 Be sane.
 
-# SUPPORT
-
-No support needed.
-
 # SEE ALSO
 
 - [Alien::Build::Manual::Alien](https://metacpan.org/pod/Alien::Build::Manual::Alien)
@@ -157,8 +153,8 @@ No support needed.
 
 - [Alien::Build](https://metacpan.org/pod/Alien::Build)
 
-    A new installer agnostic Alien builder, intended to replace 
-    [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild).  See [Alien::Build::Manual::AlienAuthor](https://metacpan.org/pod/Alien::Build::Manual::AlienAuthor) 
+    A new installer agnostic Alien builder, intended to replace
+    [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild).  See [Alien::Build::Manual::AlienAuthor](https://metacpan.org/pod/Alien::Build::Manual::AlienAuthor)
     for details on how to create your own [Alien::Build](https://metacpan.org/pod/Alien::Build) based Alien.
 
 - [Alien::Base](https://metacpan.org/pod/Alien::Base)
