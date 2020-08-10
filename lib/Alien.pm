@@ -158,9 +158,14 @@ No support needed.
 
 =over 4
 
-=item L<alienfile>
+=item L<Alien::Build::Manual::Alien>
 
-A specification for probing, building packages for Aliens.
+Documentation for building L<Alien>s using the L<Alien::Base> + L<Alien::Build> system.
+Intended for as a starting point for Alien users and Alien authors.
+
+=item L<Alien::Build::Manual::FAQ>
+
+Quick answers (FAQ) for many common Alien issues.
 
 =item L<Alien::Build>
 
@@ -172,12 +177,6 @@ for details on how to create your own L<Alien::Build> based Alien.
 
 An (optional) base class and framework for creating Alien distributions.
 
-=item L<Alien::Base::FAQ>
-
-Frequently Asked Questions for L<Alien::Base>.  Mostly specific to 
-L<Alien::Base>, but also addresses some challenges for Alien in 
-general.
-
 =item L<#native on irc.perl.org|http://chat.mibbit.com/#native@irc.perl.org>
 
 This channel on IRC is dedicated to those interested in using native interfaces
@@ -187,6 +186,10 @@ in Perl.  It is specifically geared to Alien, L<Alien::Base> and FFI.
 
 This mailing list is mainly for L<Alien::Base>, and announcements for new
 versions will be posted there, but general Alien inquires are also welcome.
+
+=item L<https://github.com/PerlAlien>
+
+The Perl Alien organization on GitHub.
 
 =back
 

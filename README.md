@@ -146,9 +146,14 @@ No support needed.
 
 # SEE ALSO
 
-- [alienfile](https://metacpan.org/pod/alienfile)
+- [Alien::Build::Manual::Alien](https://metacpan.org/pod/Alien::Build::Manual::Alien)
 
-    A specification for probing, building packages for Aliens.
+    Documentation for building [Alien](https://metacpan.org/pod/Alien)s using the [Alien::Base](https://metacpan.org/pod/Alien::Base) + [Alien::Build](https://metacpan.org/pod/Alien::Build) system.
+    Intended for as a starting point for Alien users and Alien authors.
+
+- [Alien::Build::Manual::FAQ](https://metacpan.org/pod/Alien::Build::Manual::FAQ)
+
+    Quick answers (FAQ) for many common Alien issues.
 
 - [Alien::Build](https://metacpan.org/pod/Alien::Build)
 
@@ -160,12 +165,6 @@ No support needed.
 
     An (optional) base class and framework for creating Alien distributions.
 
-- [Alien::Base::FAQ](https://metacpan.org/pod/Alien::Base::FAQ)
-
-    Frequently Asked Questions for [Alien::Base](https://metacpan.org/pod/Alien::Base).  Mostly specific to 
-    [Alien::Base](https://metacpan.org/pod/Alien::Base), but also addresses some challenges for Alien in 
-    general.
-
 - [#native on irc.perl.org](http://chat.mibbit.com/#native@irc.perl.org)
 
     This channel on IRC is dedicated to those interested in using native interfaces
@@ -175,6 +174,10 @@ No support needed.
 
     This mailing list is mainly for [Alien::Base](https://metacpan.org/pod/Alien::Base), and announcements for new
     versions will be posted there, but general Alien inquires are also welcome.
+
+- [https://github.com/PerlAlien](https://github.com/PerlAlien)
+
+    The Perl Alien organization on GitHub.
 
 # AUTHORS
 
