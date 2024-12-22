@@ -1,3 +1,5 @@
 /Alien-*
 /.build
 *.swp
+*.old
+*.orig
